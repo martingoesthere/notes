@@ -333,10 +333,140 @@ const AddItem: React.FC = () => {
 export default AddItem;
 
 
-/********************************************************************************************************************************/
-/********************************************************************************************************************************/
-/********************************************************************************************************************************/
+// src/components/EditItem.tsx
+import React, { useState, useEffect } from "react";
+import { RouteComponentProps } from "react-router-dom";
+import Item from "../interfaces/Item";
 
+interface RouteParams {
+  id: string;
+}
+
+const EditItem: React.FC<RouteComponentProps<RouteParams>> = ({ match }) => {
+  const [item, setItem] = useState<Item>({ id: 0, name: "", description: "" });
+
+  useEffect(() => {
+    fetchItem();
+  }, []);
+
+  const fetchItem = async () => {
+    const response = await fetch(`/api/items/${match.params.id}`);
+    const data = await response.json();
+    setItem(data);
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    await fetch(`/api/items/${match.params.id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(item),
+    });
+  };
+
+  return (
+    <div>
+      <h1>Edit Item</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={item.name}
+          onChange={(event) =>
+            setItem({ ...item, name: event.target.value })
+          }
+        />
+        <textarea
+          value={item.description}
+          onChange={(event) =>
+            setItem({ ...item, description: event.target.value })
+          }
+        />
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  );
+};
+
+export default EditItem;
+
+
+// src/components/ItemList.tsx
+import React, { useEffect, useState } from "react";
+import Item from "../interfaces/Item";
+
+const ItemList: React.FC = () => {
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    const response = await fetch("/api/items");
+    const data = await response.json();
+    setItems(data);
+  };
+
+  const handleDelete = async (id: number) => {
+    await fetch(`/api/items/${id}`, {
+      method: "DELETE",
+    });
+    setItems(items.filter((item) => item.id !== id));
+  };
+
+  return (
+    <div>
+      <h1>Item List</h1>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            {item.name} ({item.description})
+            <button onClick={() => handleDelete(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemList;
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+fetch('/api/items')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+  fetch('/api/items', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'New Item', description: 'Description of the new item' })
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+
+// PUT request
+fetch('/api/items/1', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'Updated Item', description: 'Description of the updated item' })
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+  
+  // DELETE request
+  fetch('/api/items/1', {
+    method: 'DELETE'
+  })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+  
+  
 
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
