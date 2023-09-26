@@ -1,10 +1,12 @@
+package java;
 
 video1
 BITS VS BYTES
 ASCII
 CPU
-OS
-PROGRAM
+OS 
+PROGRAM 
+COMPILE A PROGRAM
 /*******************************************************************************************************************************/
 video2
 JAVA SE (STANDART EDITION)
@@ -20,7 +22,7 @@ THISPC>WINDOWSSD>PROGRAMFILES>JAVA>JDK>
 edit env var c:\jdk-15.0.2\bin
 EDIT ENVIROMENT VARIABLES FOR YOUR ACCOUNT
 /*******************************************************************************************************************************/
-video3
+video3 
 jshell -v + enter
 /exit + enter
 crtl + L to clear the screen
@@ -29,7 +31,7 @@ video4
 archivo de texto
 archivo binario
 plug-in
-API
+API 
 FRAMEWORK
 THREAD
 PARSER

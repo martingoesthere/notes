@@ -11,6 +11,10 @@ precedencia de operadores
 operadores de asignacion
 operadores aritmeticos 
 module operator example
+int currentHour = 10;
+int hoursToAdd = 5;
+int newHour = (currentHour + hoursToAdd) % 12; // Result: 3
+
     int number = 10;
     if (number % 2 == 0) {
         System.out.println("The number is even.");
@@ -192,7 +196,7 @@ java -cp C:\javaLearningPath MartinsClass
 java -cp C:\javaLearningPath;C:\otroDir Ejemplo ???
 .jar
 la declaracion Package
-package com.rcosio.oop;
+package java;
 com.rcosio.oop.MiClase
 com.rcosio.oop.MartinsClass
 move 
@@ -238,65 +242,133 @@ api java documentation
 /*******************************************************************************************************************************/
 video 23
 java.lang.System
+System.out.println();
 in, out, err
 BufferedReader 
 InputStreamReader
 public static void main(String[] args) throws Exception{} ????
-java.util.properties
+import java.util.Properties
+learnJava>src>com>rcosio>SysteminTest> 
+md build
+learnJava>src>javac -d C:\javaLearningPath\build com\rcosio\SysteminTest.java  
+learnJava>src>com>rcosio>SysteminTest.java 
+learnJava>src>java -cp c:\learnJava\build com.rcosio.SysteminTest
+import java.util.Properties
+props.stringPropertyNames()
+System.getProperty()
 
 /*******************************************************************************************************************************/
-video 24 
+// video 24 
+// datos primitivos
+// java.lang.Boolean
+// MIN_VALUE and MAX_VALUE
+// autoboxing
+// boxing vs unboxing
+// intValue();
+// String
 
-datos primitivos
-java.lang.Boolean
-MIN_VALUE and MAX_VALUE
-autoboxing
-boxing vs unboxing
-intValue();
-String
-
-/*******************************************************************************************************************************/
-video 25 
-StringBuilder
-System.currentTimeMillis()
-/*******************************************************************************************************************************/
-video 26 
-StringTokenizer
-javac -d c:\javaLearningPath\build com\rcosio\StringTokenizerDemo.java
-java -cp c:\javaLearningPath\build com\rcosio.StringTokenizerDemo
-
+// /*******************************************************************************************************************************/
+// video 25 
+// StringBuilder
+// System.currentTimeMillis()
+// /*******************************************************************************************************************************/
+// video 26 
+// StringTokenizer
+// javac -d c:\javaLearningPath\build com\rcosio\StringTokenizerDemo.java
+// java -cp c:\javaLearningPath\build com\rcosio.StringTokenizerDemo
 
 
-/*******************************************************************************************************************************/
-video 43
-file>newProject>javawithant>javaapplication>select2options>
-new>javaClass>
-tools>options>fontsandcolors>lucidaconsole14
-psvm+tab
-sout+tab
-miProject>properties>build>compiling>compileonsave
-miProject>build
-window>output
+// /*******************************************************************************************************************************/
+// video 42
+// install netbeans 
+// set enviroment variables
+// tools>options>fontsandcolors>lucidaconsole14
+// C:\Program Files\NetBeans-17\netbeans\etc\netbeans.conf
+// update neatbeans version
+// /*******************************************************************************************************************************/
+// video 43
+// file>newProject>javawithant>javaapplication>select2options>
+// C:\learnJava\MiProject
+// right click new>javaClass>
+// tools>options>fontsandcolors>lucidaconsole14
+// psvm+tab
+// sout+tab
+// miProject>properties>build>compiling>compileonsave
+// miProject>build
+// window + reset window
+// window>output
+// .jar file in java
+// learnJava/miprojecto/dist/miprojecto.jar
+// java -cp c:\learnjava\miprojecto\dist\miproject.jar com.rcosio.HolaMundo         // hola mundo 
+// miprojecto>properties>run>mainclass>com.rcosio.HolaMundo
+// /*******************************************************************************************************************************/
+// video 44
+// println + crtl + space
+// StringTokenizer ???
+// run > runfile
+// navegator
+// window + navegator
+// go to type  contrl + o 
+// nombreApellido; cntl + k 
+// go to line cntl + g
+// TODO
+// BufferedReader 
+// InputStreamReader
+// window + action items
+// filter todo's in java
+// /*******************************************************************************************************************************/
+// video 45
+// click on line numbers to create a breakpoint
+// debug + debugFile
+// debug + step over
+// debug + step into
+// variables-breakpoints-output
+// debug + evaluate expresion
+// debug (take a full course)
+// /*******************************************************************************************************************************/
+// video 46
+// window + debugging + breakpoints
+
+// /*******************************************************************************************************************************/
+// video 50
+// java Project with existing recourses
+// projectName: learnJava
+// projectFolder: c:\theJavaPath\learnJava
+// miproject>rightclick properties > 
+
+// video 51
+// c:\theJavaPath\learnJava>jshell -v
 
 
-/*******************************************************************************************************************************/
-https://www.youtube.com/watch?v=zil6BaMkX9E&t=26s
-java --version
-javac --version
-echo %JAVA_HOME%
-C:\Program Files\MySQL\MySQL Server 8.0\bin
-C:\Program Files\Java\jdk-20\bin
-https://www.youtube.com/watch?v=KtmqG_14048
-
-
-/*******************************************************************************************************************************/
 
 
 
 
-/*******************************************************************************************************************************/
 
 
 
 
-/*******************************************************************************************************************************/
+
+
+
+// /*******************************************************************************************************************************/
+// https://www.youtube.com/watch?v=zil6BaMkX9E&t=26s
+// java --version
+// javac --version
+// echo %JAVA_HOME%
+// C:\Program Files\MySQL\MySQL Server 8.0\bin
+// C:\Program Files\Java\jdk-20\bin
+// https://www.youtube.com/watch?v=KtmqG_14048
+
+
+// /*******************************************************************************************************************************/
+
+
+
+
+// /*******************************************************************************************************************************/
+
+
+
+
+// /*******************************************************************************************************************************/

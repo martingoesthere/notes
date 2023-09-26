@@ -40,3 +40,8 @@ like keeping a spare laptop or having printed copies of the slides as a fallback
 ("The documentary film serves as a cautionary example of the environmental consequences of unchecked industrialization.");
 ("Parents often use cautionary stories to teach their children important life lessons.");
 ("The stock market crash of 2008 is often cited as a cautionary event for investors to diversify their portfolios.");
+
+("Get a discount of up to 50% on all products");
+("The stadium has a capacity for up to 50,000 people");
+("The train will travel up to the last station");
+("The battery has a duration of up to 10 hours");

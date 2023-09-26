@@ -413,11 +413,214 @@
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
+// 5 kyu
+// Mission: Hidden Message
+
+// function foundationMessage(message) {
+//   return message.split(".")[0].split(" ");
+// }
+
+// const quote = `Yesterday, we bumped into Laura.
+// It had to happen, but you can\'t deny the timing couldn\'t be worse.
+// The "mission" to try and seduce her was a complete failure last month.
+// By the way, she still has the ring I gave her.
+// Anyhow, it hasn\'t been a pleasurable experience to go through it.
+// I wanted to feel done with it first.`;
+
+// ("The mission has been done.");
+// console.log(foundationMessage(quote));
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+
+// var lastDigit = function (str1, str2) {
+//   let one = Number(str1);
+//   let two = Number(str2);
+//   let three = `${one ** two}`.split("");
+//   let four = Number(three[three.length - 1]);
+//   return four;
+// };
+
+// console.log(lastDigit("4", "1")); // returns 4
+// console.log(lastDigit("4", "2")); // returns 6
+// console.log(lastDigit("9", "7")); // returns 9
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+// const numberToEnglish = (n) => {
+//   return n.toString().split("").length;
+// };
+
+// console.log(numberToEnglish(10));
+
+// 0      -->  "zero"
+// 27     -->  "twenty seven"
+// 100    -->  "one hundred"
+// 7012   -->  "seven thousand twelve"
+// 99205  -->  "ninety nine thousand two hundred five"
 
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
 
+// 4 kyu
+// Block sequence
+
+// function solve(n) {
+//   let empty = [];
+//   for (let i = n; i > 0; i--) {
+//     // console.log(i);
+//     empty = empty.concat(i);
+//   }
+//   let fullArr = empty.reverse().map((val, ind, arr) => {
+//     let zero = [];
+//     for (let j = 1; j <= val; j++) {
+//       zero = zero.concat(j);
+//     }
+//     return zero;
+//   });
+//   let fullFinalArr = fullArr.join().split(",").join("");
+//   // .join().split(",").join("");
+//   return fullFinalArr.charAt(n + 1);
+// }
+
+// // console.log(solve(5));
+// console.log(solve(1));
+// console.log(solve(3));
+
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
 /********************************************************************************************************************************/
+
+// 4 kyu
+// Simple Fun #148: Exchange Sort
+
+// function exchangeSort(sequence) {
+//   // coding and coding...
+//   let one = sequence.sort((a, b) => {
+//     return a - b;
+//   });
+//   let sorted = one;
+//   for (let i = 0; i < sorted.length; i++) {
+//     for (let j = 0; j < sequence.length; i++) {
+//       console.log(123);
+//     }
+//   }
+// }
+
+// console.log(exchangeSort([8, 8, 7, 9, 9, 9, 8, 9, 7]));
+
+// Primer ejercicio
+// function sizeName(name) {
+//   let result = null;
+//   if (name.length > 5) {
+//     result = "it´s a long name";
+//   } else {
+//     result = "it´s a short name";
+//   }
+//   return result;
+// }
+
+// let primerNombre = sizeName("Mariana");
+// let segundoNombre = sizeName("Luis");
+// let tercerNombre = sizeName("Roberto");
+
+// console.log(primerNombre);
+// console.log(segundoNombre);
+// console.log(tercerNombre);
+
+//Segundo ejercicio
+// function typeNumber(number) {
+//   let type = null;
+//   if (number % 2 === 0) {
+//     type = "It´s an even number";
+//   } else {
+//     type = "It´s an odd number";
+//   }
+//   return "please enter a number";
+// }
+// let number1 = typeNumber(8);
+// let number2 = typeNumber(7);
+// console.log(number1);
+// console.log(number2);
+//Tercer Ejercicio
+// function personName(name, surname) {
+//   let fullName = name.concat(" ", surname);
+//   let result = fullName.length;
+//   return result + " " + fullName;
+// }
+
+// let name1 = personName("Guadalupe", "Angeles");
+// console.log(name1);
+// console.log(personName("miriam", "sanchez"));
+
+// function sizeName(name) {
+//   return name.length > 5 ? "it´s a long name" : "it´s a short";
+// }
+
+// console.log(sizeName("Mariana"));
+// console.log(sizeName("luis"));
+// console.log(sizeName("Roberto"));
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+
+// 4 kyu
+// Next bigger number with the same digits
+
+// const nextBigger = (n) => {
+//   //your code here
+//   let one = n + "";
+//   let two = one.split("");
+//   let three = two.map((number) => Number(number));
+//   let four = three.sort((a, b) => {
+//     return b - a;
+//   });
+//   return Number(four.join(""));
+// };
+
+// console.log(nextBigger(513));
+// console.log(nextBigger(2017));
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+// function solution(str, ending) {
+//   return str.endsWith(ending);
+// }
+
+// console.log(solution("abc", "bc"));
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+
+const one = [
+  "E1- antinio",
+  "E2- antinio",
+  "E3- antinio",
+  "E4- antinio",
+  "E5- antinio",
+  "E6- antinio",
+  "E7- antinio",
+  "E8- antinio",
+  "E9- antinio",
+  "E9- antinio",
+  "E9- antinio",
+  "E10- antinio",
+  "E11- antinio",
+  "E12- antinio",
+  "E13- antinio",
+];
+
+const filteredArray = one.slice(
+  one.indexOf(one.includes("E1")),
+  one.indexOf(one.includes("E4"))
+);
+const filteredArray2 = one.slice();
+
+console.log(filteredArray);
+console.log(filteredArray2);
